@@ -1,4 +1,4 @@
-# clipboard-landing-page
+# crypto-news-page
 
 
 ## Table of contents
