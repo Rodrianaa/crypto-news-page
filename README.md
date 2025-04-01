@@ -10,7 +10,7 @@
   - [Built with](#built-with)
 
 ## Live Demo
-You can view the live version of this project at 
+You can view the live version of this project at https://rodrianaa.github.io/crypto-news-page/
 
 ## Overview
 
