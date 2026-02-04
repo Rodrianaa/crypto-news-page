@@ -129,11 +129,12 @@ b {
 }
 
 .header-menu-burger {
-    background-color: #a3a3a3;
+    /* background-color: #a3a3a3; */
     border: none;
     display: none;
     font-size: 22px;
     cursor: pointer;
+    color: var(--text-medium);
 }
 
 .header-actions {
@@ -512,4 +513,5 @@ button.form-button {
     height: auto;
   }
 }
+
 
