@@ -1,58 +1,74 @@
-:root {
-  --primary: #f9b500;
-  --dark: #111;
-  --gray: #888;
-  --bg-light: #fafafa;
-  --text-color: #333;
-  --radius: 12px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto News</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    crossorigin="anonymous"
+  />
+</head>
 
-/* DARK MODE VARIABLES */
-body.dark-mode {
-  --bg-light: #111;
-  --text-color: #f0f0f0;
-  --gray: #aaa;
-  --primary: #f9b500;
-}
+<body>
+  <section class="app">
+    <!-- HEADER -->
+    <header class="site-header">
+      <nav class="header">
+        <img src="images/logo-black.png" alt="Logo" class="header-logo" />
+        <ul class="header-menu" id="menu">
+          <li class="header-menu-item"><a href="#" class="header-menu-item-link">NEWS</a></li>
+          <li class="header-menu-item"><a href="#" class="header-menu-item-link">GUIDES & ANALYTICS</a></li>
+          <li class="header-menu-item"><a href="#" class="header-menu-item-link">EVENTS</a></li>
+          <li class="header-menu-item"><a href="#" class="header-menu-item-link">EXPLAINED</a></li>
+          <li class="header-menu-item"><a href="#" class="header-menu-item-link">ICO CALENDAR</a></li>
+        </ul>
+        <div class="header-actions">
+          <button id="darkModeToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+          <button class="header-menu-burger" onclick="showMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-/* Apply dynamic colors */
-body {
-  background-color: var(--bg-light);
-  color: var(--text-color);
-  line-height: 1.6;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
+    <!-- CONTENT -->
+    <section class="content">
+      <!-- INTRO GRID -->
+      <section class="intro">
+        <!-- Your intro items here (unchanged) -->
+      </section>
 
-/* Rest of your CSS remains the same, but change hardcoded colors to variables */
-a {
-  color: var(--text-color);
-}
-.text-muted {
-  color: var(--gray);
-}
+      <!-- MAIN CONTENT -->
+      <section class="container">
+        <main>
+          <!-- Main news content (unchanged) -->
+        </main>
 
-/* Header background for dark mode */
-.site-header {
-  background-color: var(--bg-light);
-}
+        <!-- SIDEBAR -->
+        <aside>
+          <section class="sidebar-item">
+            <h3 class="title">LIVE CRYPTO PRICES</h3>
+            <ul class="sidebar-list" id="cryptoPrices">
+              <li><b>BTC = Loading...</b></li>
+              <li><b>ETH = Loading...</b></li>
+              <li><b>BNB = Loading...</b></li>
+              <li><b>ADA = Loading...</b></li>
+              <li><b>SOL = Loading...</b></li>
+              <li><b>XRP = Loading...</b></li>
+            </ul>
+          </section>
 
-/* Sidebar list */
-.sidebar-list li {
-  background-color: var(--primary);
-  color: var(--dark);
-}
+          <!-- Other sidebar items (Popular posts, newsletter) -->
+        </aside>
+      </section>
+    </section>
+  </section>
 
-/* Popular posts hover shadow remains same */
-.popular-post:hover {
-  box-shadow: var(--shadow);
-}
+  <!-- FOOTER (unchanged) -->
 
-/* Footer colors */
-footer {
-  background-color: #191919;
-  color: #ccc;
-}
+  <script src="script.js"></script>
+</body>
+</html>
