@@ -399,7 +399,6 @@ main article,
   border: none;
   background-color: var(--primary);
   position: absolute;
-  right: 1px;
   top: 1px;
   border-radius: 10px;
   cursor: pointer;
@@ -625,3 +624,4 @@ footer {
     text-align: center;
   }
 }
+
