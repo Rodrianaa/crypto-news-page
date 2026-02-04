@@ -447,7 +447,7 @@ body.dark-mode .sidebar-list li {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 990px) {
     .header-menu-burger {
         display: block;
     }
@@ -483,8 +483,6 @@ body.dark-mode h3.title {
 body.dark-mode .title {
     color: var(--gray);
 }
-
-p {}
 
 section.sidebar-item p {
     margin-bottom: 40px;
