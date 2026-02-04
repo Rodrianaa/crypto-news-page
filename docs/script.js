@@ -5,32 +5,34 @@ function showMenu() {
 }
 
 // Dark mode toggle
-const darkModeToggle = document.getElementById("darkModeToggle");
-darkModeToggle.addEventListener("click", () => {
+const darkModeBtn = document.getElementById("darkModeToggle");
+darkModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
+  // Change icon
+  const icon = darkModeBtn.querySelector("i");
+  if(document.body.classList.contains("dark-mode")){
+    icon.classList.replace("fa-moon","fa-sun");
+  } else {
+    icon.classList.replace("fa-sun","fa-moon");
+  }
 });
 
-// Fetch live crypto prices using CoinGecko API
+// Live crypto prices using CoinGecko API
 async function fetchCryptoPrices() {
-  const apiUrl = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,cardano,solana,ripple&vs_currencies=usd";
+  const cryptoList = ["bitcoin","ethereum","binancecoin","cardano","solana","ripple"];
   try {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    const pricesList = document.getElementById("cryptoPrices");
-    pricesList.innerHTML = `
-      <li><b>BTC = $${data.bitcoin.usd.toLocaleString()}</b></li>
-      <li><b>ETH = $${data.ethereum.usd.toLocaleString()}</b></li>
-      <li><b>BNB = $${data.binancecoin.usd.toLocaleString()}</b></li>
-      <li><b>ADA = $${data.cardano.usd.toLocaleString()}</b></li>
-      <li><b>SOL = $${data.solana.usd.toLocaleString()}</b></li>
-      <li><b>XRP = $${data.ripple.usd.toLocaleString()}</b></li>
-    `;
-  } catch (error) {
-    console.error("Failed to fetch crypto prices:", error);
+    const res = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${cryptoList.join(",")}&vs_currencies=usd`);
+    const data = await res.json();
+    const ul = document.getElementById("cryptoPrices");
+    ul.innerHTML = "";
+    cryptoList.forEach(coin => {
+      ul.innerHTML += `<li><b>${coin.toUpperCase()} = $${data[coin].usd}</b></li>`;
+    });
+  } catch(err) {
+    console.error("Error fetching crypto prices:", err);
   }
 }
 
-// Fetch prices on page load
+// Fetch prices every 30 seconds
 fetchCryptoPrices();
-// Update every 60 seconds
-setInterval(fetchCryptoPrices, 60000);
+setInterval(fetchCryptoPrices, 30000);
