@@ -4,7 +4,7 @@ A modern, responsive cryptocurrency news website built with HTML, CSS, and JavaS
 
 🔗 Live Demo
 
-View Live on GitHub Pages
+[Live Demo](https://rodrianaa.github.io/todo-list/)
 
 📝 Table of Contents
 
