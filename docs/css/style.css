@@ -33,6 +33,7 @@ body {
 a {
     text-decoration: none;
     transition: all 0.2s ease;
+    color: #6b6b6b;
 }
 
 a:hover {
@@ -121,6 +122,7 @@ b {
 .header-menu-item-link {
     font-weight: 600;
     letter-spacing: 0.04em;
+    color: var(--text-medium);
 }
 
 .header-menu li:not(:last-child) {
@@ -306,6 +308,7 @@ main article, .sidebar-item {
     font-size: 20px;
     font-weight: 700;
     line-height: 1.4;
+    color: var(--text-medium);
 }
 
 .info-bar {
@@ -444,7 +447,7 @@ body.dark-mode .sidebar-list li {
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1052px) {
     .header-menu-burger {
         display: block;
     }
@@ -472,16 +475,12 @@ body.dark-mode .sidebar-list li {
   .app{
     width:100%;
   }
-}
-
-body.dark-mode h3.title {
+    
 }
 
 body.dark-mode .title {
     color: var(--gray);
 }
-
-p {}
 
 section.sidebar-item p {
     margin-bottom: 40px;
@@ -509,4 +508,10 @@ button.form-button {
     grid-auto-rows: 280px; /* or auto if you want height to adjust */
     height: auto; /* let height grow based on content */
   }
+}
+
+
+footer {
+    padding-right: 12px;
+    padding-left: 12px;
 }
