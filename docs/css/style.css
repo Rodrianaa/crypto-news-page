@@ -469,15 +469,16 @@ body.dark-mode .sidebar-list li {
         padding: 20px 0;
         text-align: center;
     }
+    
+    .header-menu.show {
+    display: block;
+}
 }
 
 @media (max-width: 1230px){
   .app{
     width:100%;
   }
-}
-
-body.dark-mode h3.title {
 }
 
 body.dark-mode .title {
@@ -511,3 +512,4 @@ button.form-button {
     height: auto;
   }
 }
+
